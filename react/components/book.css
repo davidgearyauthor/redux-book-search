@@ -1,0 +1,12 @@
+.books-enter {
+  opacity: 0.01;
+}
+
+.books-enter.books-enter-active {
+  opacity: 1;
+  transition: opacity 1000ms ease-in;
+}
+
+.books-leave {
+  opacity: 0.01;
+}

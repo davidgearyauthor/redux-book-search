@@ -8,9 +8,6 @@ export default {
   thereIsAFuture:      function () { return this.future.length > 0; },
   setPresent:          function (state) { this.present = state; },
   movePresentToPast:   function () { this.past.push(this.present); },
-  movePresentToFuture: function () { this.future.push(this.present); },
-  movePastToPresent:   function () { this.setPresent(this.past.pop()); },
-  moveFutureToPresent: function () { this.setPresent(this.future.pop()); },
  
   push: function (currentState) {
     if (this.thereIsAPresent()) {

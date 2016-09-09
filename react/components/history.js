@@ -32,21 +32,28 @@ export const History = ({
     </a>
   );
 
-  const max = () => (
-    (past    ? past.length   : 0) +
+  const max = () => {
+    const v = (past    ? past.length   : 0) +
     (present ? 1 : 0)             +
-    (future  ? future.length : 0) - 1
-  );
+    (future  ? future.length : 0) - 1;
 
-  const value = () => past ? past.length : 0;
+    console.log('Max: ' + v);
+    return v;
+  }
 
+  const value = () => {
+    const v = past ? past.length : 0;
+    console.log('Value: ' + v);
+    return v;
+  }
+  
   return (
     <span style={styles.container}>
       History
 
       <input type="range"
         style={styles.input}
-        min={1} 
+        min={0} 
         max={max()} 
         value={value()}
         onChange={event => gotoState(event.target.value)} />

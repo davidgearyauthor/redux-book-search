@@ -19,23 +19,20 @@ export default {
     this.setPresent(currentState);
   },
   
+  getIndex: function () {
+    return this.past.length;
+  },
+  
   undo: function () {
-    if (this.thereIsAPresent()) {   
-      this.movePresentToFuture(); // Moving back in time
-      this.movePastToPresent();   // Moving back in time
+    if (this.thereIsAPast()) {   
+      this.gotoState(this.getIndex()-1);
     }
   },  
 
   redo: function () {
-    if (!this.thereIsAFuture()) { // No future!
-      return;
+    if (this.thereIsAFuture()) {
+      this.gotoState(this.getIndex()+1);
     }
-
-    if (this.thereIsAPresent()) {
-      this.movePresentToPast(); // Moving forward in time
-    }
-
-    this.moveFutureToPresent(); // Moving forward in time
   },
 
   gotoState: function (i) {

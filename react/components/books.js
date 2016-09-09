@@ -1,8 +1,6 @@
 import React from 'react';
 import Book from './book.js';
-
-let ReactCSSTransitionGroup =
-      require('react-addons-css-transition-group');
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 const Books = ({
   books,

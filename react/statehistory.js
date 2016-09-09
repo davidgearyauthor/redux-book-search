@@ -22,13 +22,13 @@ export default {
   
   undo: function () {
     if (this.thereIsAPast()) {   
-      this.gotoState(this.getIndex()-1);
+      this.gotoState(this.getIndex() - 1);
     }
   },  
 
   redo: function () {
     if (this.thereIsAFuture()) {
-      this.gotoState(this.getIndex()+1);
+      this.gotoState(this.getIndex() + 1);
     }
   },
 

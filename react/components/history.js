@@ -32,20 +32,12 @@ export const History = ({
     </a>
   );
 
-  const max = () => {
-    const v = (past    ? past.length   : 0) +
+  const max = () => 
+    (past    ? past.length   : 0) +
     (present ? 1 : 0)             +
     (future  ? future.length : 0) - 1;
 
-    console.log('Max: ' + v);
-    return v;
-  }
-
-  const value = () => {
-    const v = past ? past.length : 0;
-    console.log('Value: ' + v);
-    return v;
-  }
+  const value = () => past ? past.length : 0;
   
   return (
     <span style={styles.container}>

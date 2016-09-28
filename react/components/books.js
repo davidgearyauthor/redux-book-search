@@ -25,7 +25,7 @@ const Books = ({
     </div>
   );
 
-  function bookMarkup() {
+  const bookMarkup = () => {
     let components = null;
     let bookItems = (<span>No items!</span>);
 

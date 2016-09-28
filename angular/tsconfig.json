@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "removeComments": false,
+    "noImplicitAny": false
+  },
+  "files": [
+    "app/components/app.component.ts",
+    "app/app.module.ts",
+    "app/main.ts",
+    "actions.ts",
+    "middleware.ts",
+    "reducers.ts",
+    "statehistory.ts",
+    "store.ts"
+  ]
+}
+

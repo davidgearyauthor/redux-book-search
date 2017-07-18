@@ -47,7 +47,7 @@ const Books = ({
       });
     }
     return components;
-  }
+  };
 
   return (
     <div>
